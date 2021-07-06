@@ -1,0 +1,191 @@
+:root {
+    --primary-color: white;
+    --secondary-color: grey;
+    --tertiary-color: #007bff;
+    --green-color: green;
+    --orange-color: orange;
+    --yellow-color: yellow;
+    --red-color: red;
+    --purple-color: purple;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    font-size: 16px;
+    line-height: 1;
+}
+
+header {
+    font-size: 40px;
+    font-weight: bolder;
+    background-color:  rgb(58, 58, 58);
+    color: var(--primary-color);
+    text-align: center;
+    padding: 25px;
+}
+
+.container {
+    width: 100%;
+    padding-top: 20px;
+    clear: both;
+    float: right;
+}
+
+section {
+    overflow: auto;
+    clear: both;
+    width: 100%;
+}
+
+/* Search for a city sidebar */
+
+#sideNav {
+    height: 100%;
+    position: fixed;
+    top: 90px;
+    left: 0;
+    background-color: rgb(247, 245, 245);
+}
+
+h1 {
+    font-size: 20px;
+    text-align: left;
+    padding: 20px 0px 10px 5px;
+}
+
+#basic-text1 {
+    background-color: var(--tertiary-color);;
+}
+
+.fas {
+    color: var(--primary-color);
+}
+
+/*--Daily Forecast */
+
+h2 {
+    font-size: 30px;
+    text-align: left;
+    font-weight: bolder;
+    padding: 20px;
+}
+
+p {
+    padding-bottom: 250px;
+    color: var(--secondary-color);
+}
+
+a {
+    font-size: 18px;
+    color: var(--secondary-color);
+    line-height: 35px;
+}
+
+ul {
+    color: var(--secondary-color);
+    font-size: 18px;
+    line-height: 24px;
+    padding-left: 20px;
+}
+
+/* UV Index colors */
+
+.green {
+    background-color: var(--green-color);
+    color: var(--primary-color);
+    margin-left: 20px;
+    padding: 15px;
+    margin-bottom: 30px;
+    border: none;
+}
+
+.orange {
+    background-color: var(--orange-color);
+    color: var(--primary-color);
+    padding: 15px;
+    margin-bottom: 30px;
+    border: none;
+}
+
+.yellow {
+    background-color: var(--yellow-color);
+    color: black;
+    margin-left: 20px;
+    padding: 15px;
+    margin-bottom: 30px;
+    border: none;
+}
+
+.red {
+    background-color: var(--red-color);
+    color: var(--primary-color);
+    margin-left: 20px;
+    padding: 15px;
+    margin-bottom: 30px;
+    border: none;
+}
+
+.purple {
+    background-color: var(--purple-color);
+    color: var(--primary-color);
+    margin-left: 20px;
+    padding: 15px;
+    margin-bottom: 30px;
+    border: none;
+}
+
+/*--5-Day Forecast */
+
+#fiveDay {
+    text-align: left;
+    font-weight: bold;
+    padding-top: 30px;
+    padding-bottom: 15px;
+    font-size: 30px;
+    color: black;
+}
+
+#dailyforcast {
+    width: 100%;
+    padding: 0;
+    margin: 5px 0px 0px 15px;
+}
+
+.card-deck {
+    margin: 0 auto;
+    float: none;
+    align-content: center;
+}
+
+.fiveDayCard {
+    border: none;
+}
+
+.card-header {
+    font-size: 20px;
+    font-weight: bolder;
+    color: var(--primary-color);
+    text-align: center;
+    padding-bottom: 0px;
+    border: none;
+}
+
+.card-body {
+    text-align: center;
+    padding-bottom: 30px;
+    font-size: 16px;
+    line-height: 30px;
+    color: var(--primary-color);
+    background-color: var(--tertiary-color);
+    border: none;
+}
+
+.card-deck .card {
+    margin-bottom: 15px;
+}
