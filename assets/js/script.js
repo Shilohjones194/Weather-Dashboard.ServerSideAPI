@@ -33,11 +33,13 @@ $(document).ready(function () {
         $("#day3").empty();
         $("#day4").empty();
         $("#day5").empty();
+        console.log(cityInput);
 
         // QueryURL to Open Weather App for One Day
         var oneDay = "https://api.openweathermap.org/data/2.5/weather?q="
             + cityInput + "&units=imperial" + "&appid=6c5fa35c1b1694e8eb904deeb7a1c0ac";
         console.log("oneDay", oneDay);
+
 
         //AJAX call for One Day
         $.ajax({
