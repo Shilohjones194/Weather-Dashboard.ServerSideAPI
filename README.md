@@ -1,11 +1,26 @@
 # Weather-Dashboard.ServerSideAPI
 Challenge 6. Originally saved under "git-it-done.git" until Github issues
 
-### Application Deployed To GitHub Pages 
 
 
 ### Description 
-https://openweathermap.org/darksky-openweather
+This is a basic weather dashboard, that retrieves data from a weatherAPI displaying a 5 day forecast.
+To do this we used the following:
+* Server-Side-API https://openweathermap.org/darksky-openweather 
+* jQuery.ajax
+* Javascript
+* HTML
+* BootStrap and CSS
+* moment.js
+
+![image](https://user-images.githubusercontent.com/76697212/128930479-4fcf1c16-7c85-4077-9649-c8d2033cd27c.png)
+
+
+
+### Application Deployed To GitHub Pages 
+https://shilohjones194.github.io/Weather-Dashboard.ServerSideAPI/
+
+
 
 
 ### User Story 
