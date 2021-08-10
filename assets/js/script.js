@@ -8,7 +8,7 @@ var day4 = moment().add(4, 'days').format('M/DD/YYYY');
 var day5 = moment().add(5, 'days').format('M/DD/YYYY');
 
 $(document).ready(function () {
-    console.log("ready!");
+    //console.log("Lets Do This!");
 
     // On-click when user enters city
     $("#basic-text1").on("click", function (event) {
@@ -36,7 +36,7 @@ $(document).ready(function () {
 
         // QueryURL to Open Weather App for One Day
         var oneDay = "https://api.openweathermap.org/data/2.5/weather?q="
-            + cityInput + "&units=imperial" + "&appid=45e45c0bb2ef540df33fa21a29aafa8a";
+            + cityInput + "&units=imperial" + "&appid=6c5fa35c1b1694e8eb904deeb7a1c0ac";
         console.log("oneDay", oneDay);
 
         //AJAX call for One Day
@@ -62,7 +62,7 @@ $(document).ready(function () {
 
             // QueryURL to Open Weather App
             var fiveDay = "https://api.openweathermap.org/data/2.5/onecall?"
-                + "lat=" + lat + "&lon=" + lon + "&units=imperial" + "&appid=45e45c0bb2ef540df33fa21a29aafa8a";
+                + "lat=" + lat + "&lon=" + lon + "&units=imperial" + "&appid=6c5fa35c1b1694e8eb904deeb7a1c0ac";
             console.log("fiveDay", fiveDay);
 
             //AJAX call for Five Day & UV
