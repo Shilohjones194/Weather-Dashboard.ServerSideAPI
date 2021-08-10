@@ -1,5 +1,5 @@
 // refer to  https://openweathermap.org/api/one-call-api
-//Meed moment for up to date date and times.
+//Meed moment() for up-to-date, dates and times.
 var startDate = moment().format('M/DD/YYYY');  // Current Date
 var day1 = moment().add(1, 'days').format('M/DD/YYYY');
 var day2 = moment().add(2, 'days').format('M/DD/YYYY');
@@ -45,10 +45,10 @@ $(document).ready(function () {
             method: "GET",
         }).then(function (response) {
 
-            // Variables
+            // Variables lat/longitude
             var iconUrl = "http://openweathermap.org/img/w/" + response.weather[0].icon + ".png"; //icon url
-            var lat = response.coord.lat; // Latiude
-            var lon = response.coord.lon; // Longitude
+            var lat = response.coord.lat; 
+            var lon = response.coord.lon; 
 
             // Append daily details to the site
             $("#dailyWeather").append(
@@ -164,4 +164,33 @@ $(document).ready(function () {
         }) // End of ajax then response
     } // end of show weather function
 
-}); // end of document ready function
+    //Now we need to create function to retrieve the stored input saved prior
+
+    function showCities () {
+        $("#cityButtons").empty(); // empties oout the array
+        var arrayFromStorage =JSON.parse(localStorage.getItem("allCities")) || [];
+        var arrayLength = arrayFromStorage.length;
+
+        // Need to lop it to pre append the cities in the length of array
+        //  /// Make sure to ENd Loop!
+        for (var i = 0; i <arrayLength; i++) {
+            var cityNameFromArray =arrayFromStorage[i]; 
+
+            $("#cityButtons").append (
+                // styling
+                "<div class = 'list-group'>"
+                // below is for the city
+                + "<button class= 'list-group-item'>" + cityNameFromArray
+                + "</button>")
+        } // loop over
+    } // showCities function is over
+
+    // Need to call ShowCities to append the cities to the page.
+    showCities (); 
+
+    $("#cityButtons").on("click", ".list-group-item", function(event) {
+        event.preventDefault();
+        var cityInput = ($(this).text());
+        showWeather(cityInput);
+    })
+}); // $(document).ready(function) closed. g2g
